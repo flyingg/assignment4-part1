@@ -7,9 +7,18 @@ ini_set('display_erros', 'On');
 <html lang = "en">
 <head>
 <meta charset = "utf-8">
-<title>MultTable - PHP</title>
+<title>MultTable - Gale</title>
 </head>
 <body>
+	<br>
+	<p><b>You will need to enter in 4 parameters using the GET in the URL</b></p>
+	<p><BLOCKQUOTE>They need to be entered in the following sequential order in the URL</BLOCKQUOTE></p>
+	<ol>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>	
 
 <?php
 
@@ -23,6 +32,10 @@ $minMultiplicand;
 $maxMultiplicand;
 $minMultiplier;
 $maxMultiplier;
+
+
+
+
 
 
 echo '<p><h3>GET variables </h3>
