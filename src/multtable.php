@@ -10,6 +10,7 @@ ini_set('display_erros', 'On');
 <title>MultTable - Gale</title>
 </head>
 <body>
+	
 <?php
 /***Start of propgram - Check input and keep track of errors***/
 $numberOfErrors = 0;
@@ -34,7 +35,7 @@ if($minMultiplicand!=(integer)$minMultiplicand || !$casted_minMultiplicand){
 	$numberOfErrors++;
 }
 
-echo "<br><br>";
+echo "<br>";
 
 //Check input in the URL for the following: max-multiplicand
 if($_GET['max-multiplicand'] == null){
@@ -47,7 +48,7 @@ if($maxMultiplicand!=(integer)$maxMultiplicand || !$casted_maxMultiplicand){
 	$numberOfErrors++;
 }
 
-echo "<br><br>";
+echo "<br>";
 
 //Check input in the URL for the following: min-multiplier
 if($_GET['min-multiplier'] == null){
@@ -60,7 +61,7 @@ if($minMultiplier!=(integer)$minMultiplier || !$casted_minMultiplier){
 	$numberOfErrors++;
 }
 
-echo "<br><br>";
+echo "<br>";
 
 //Check input in the URL for the following: max-multiplier
 if($_GET['max-multiplier'] == null){
@@ -73,10 +74,7 @@ if($maxMultiplier!=(integer)$maxMultiplier || !$casted_maxMultiplier){
 	$numberOfErrors++;
 }
 
-$i; 
-$j; 
-$productResult;
-
+/***Make sure mins are actually mins***/
 if ($minMultiplicand > $maxMultiplicand){
 	echo "Minimum [multiplicand] larger than maximum.";
 	$numberOfErrors++;
@@ -87,21 +85,23 @@ if ($minMultiplier > $maxMultiplier){
 	$numberOfErrors++;
 }
 
+/***Print product table***/
+$i; 
+$j; 
+$productResult;
 
-
-
-if($numberOfErrors > 0){
-	echo "<table>";
-	echo "<caption>PHP MultTable</capation>";
-	echo "<thead>";
-	echo "<tr>";
-	echo "<th></th>";
+if($numberOfErrors == 0){
+	echo "<table border='1'>
+	<caption><b>PHP MultTable</b></capation>
+	<thead>
+	<tr>
+	<th></th>";
 	for($i = $minMultiplier; $i <= $maxMultiplier; $i++){
 		echo "<th>$i</th>";
 	}
-	echo "</tr>";
-	echo "</thead>";
-	echo "</tbody>";
+	echo "</tr>
+	</thead>
+	</tbody>";
 	for ($j = $minMultiplicand; $j <= $maxMultiplicand; $j++){
 		echo "<tr>";
 		echo "<th>$j</th>";
@@ -111,37 +111,23 @@ if($numberOfErrors > 0){
 		}
 		echo "</tr>";
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-	//echo "";
-
-	//echo "</table>";
+	echo "</table>";
 }
 
+/***Helper Section to let you know what you've typed in***/
+echo "<br><br>";
+echo '<p><h3>Your Entered parameters</h3>
+<p>
+<table border="1">
+<tr>
+<td>key
+<td>Value';
 
-
-// /***Helper Section to let you know what you've typed in***/
-// echo '<p><h3>Your Entered parameters</h3>
-// <p>
-// <table border="1">
-// <tr>
-// <td>key
-// <td>Value';
-
-// foreach ($_GET as $key => $value) {
-// 	echo '<tr><td>' . $key . '<td>' . $value;
-// }
-// echo '<table>';
+foreach ($_GET as $key => $value) {
+	echo '<tr><td>' . $key . '<td>' . $value;
+}
+echo '<table>';
+echo '</table>';
 ?>
 
 </body>
