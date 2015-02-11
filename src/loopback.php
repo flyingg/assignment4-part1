@@ -12,15 +12,33 @@ ini_set('display_erros', 'On');
 <body>
 
 <?php
+/***Variables needed for condition checks***/
+$parameters;
+$displayParameters = array();
 
-$getVariable = $_GET['hello'];
+echo "<br>";
 
-echo $getVariable;
+/***Actual "POST"/"GET" check***/
+if ($_SERVER['REQUEST_METHOD'] == "GET"){
+	if ($displayParameters == $_GET) {
+		echo "{\"Type\":\"GET\" , \"parameters\" : null}";
+	}
+	else {
+		$parameters = json_encode($_GET);
+		echo " {\"Type\":\"GET\" , \"parameters\" : $parameters}";
+	}
+}
+else {
+	if ($displayParameters==$_POST) {
+		echo " {\"Type\":\"POST\" , \"parameters\" : null}";
+	}
+	else {
+		$parameters = json_encode($_POST);
+		echo " {\"Type\":\"POST\" , \"parameters\" : $parameters}";
+	}
+}
 
-echo "<br>I just wanted to say a few thing to you";
-
-
-/***Helper Section to let you know what you've typed in***/
+/***Helper Section used to see if "GET" check was working ***/
 echo "<br><br>";
 echo '<p><h3>Your Entered parameters</h3>
 <p>
@@ -35,4 +53,3 @@ foreach ($_GET as $key => $value) {
 echo '<table>';
 echo '</table>';
 ?>
-
