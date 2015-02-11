@@ -1,24 +1,33 @@
-Start: 
+Start: 19:00:00 
 End: Tue, 10 Feb 2015 20:17:04 -0800 
 Tasks: Get the other php files ready for completion. Goal is to finish tonight to start with part 2.
-Start: 
+
+Start: 16:00:00 
 End: Sun, 8 Feb 2015 20:29:51 -0800 
 Tasks: MultTabele.php is complete and working.
-Start: 
+
+Start: 16:00:00 
 End: Sun, 8 Feb 2015 20:10:53 -0800 
 Tasks: Almost doen with multtable.php - error checkiing complete. just need to debug the table logic/syntax
-Start: 
+
+Start: 16:00:00 
 End: Sun, 8 Feb 2015 17:26:44 -0800 
 Tasks: Making progress on mulTable.php
+
 Start: 
-End: Sun, 8 Feb 2015 17:05:26 -0800 
+16:00:00 End: Sun, 8 Feb 2015 17:05:26 -0800 
 Tasks: Update changes to the PHP files, things _so Far_ are going OK
+
 Start: 
+18:00:00 
 End: Sat, 7 Feb 2015 20:34:13 -0800 
 Tasks: read up on PHP get .php files created
+
 Start: 
+21:00:00 
 End: Wed, 4 Feb 2015 23:54:45 -0800 
 Tasks: testing modified log.txt
+
 Start: 
-End: Wed, 4 Feb 2015 23:51:56 -0800 
+21:00:00 End: Wed, 4 Feb 2015 23:51:56 -0800 
 Tasks: created log.txt file
