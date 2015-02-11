@@ -14,27 +14,30 @@ ini_set('display_erros', 1);
 
 <?php
 
-echo "testing";
-
-
+$username = $_POST['username'];
+$returnLoginURL;
 
 session_start();
-if(isset($_POST['action']) && $_POST['action'] == 'end'){
+if(!isset($_SESSION['User']) && $username == null){
+	echo "testing in first block";
 	$_SESSION = array();
 	session_destroy();
 	$filePath = explode('/', $_SERVER['PHP_SELF'], -1);
 	$filePath = implode('/', $filePath);
 	$redirect = "http://" . $_SERVER['HTTP_HOST'] . $filePath;
+	$returnLoginURL = $redirect . "/login.php";
 	header("Location: {$redirect}/login.php", true);
 	die();
 }
 
+
+
 if(session_start() == PHP_SESSION_ACTIVE){
-	if(is_integer($_POST['username'])){
+	if(isset($_POST['username'])){
 		$_SESSION['username'] = $_POST['username'];
 	}
 
-	if(!is_link($_SESSION['visits'])){
+	if(!isset($_SESSION['visits'])){
 		$_SESSION['visits'] = 0;
 	}
 
