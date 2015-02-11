@@ -17,6 +17,7 @@ ini_set('display_erros', 1);
 echo "testing";
 
 
+
 session_start();
 if(isset($_POST['action']) && $_POST['action'] == 'end'){
 	$_SESSION = array();
