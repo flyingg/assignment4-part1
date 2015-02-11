@@ -53,3 +53,6 @@ foreach ($_GET as $key => $value) {
 echo '<table>';
 echo '</table>';
 ?>
+
+</body>
+</html>
