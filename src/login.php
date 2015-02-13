@@ -2,8 +2,8 @@
 session_start();
 error_reporting(E_ALL);
 ini_set('display_erros', 'On');
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang = "en">
@@ -13,18 +13,27 @@ ini_set('display_erros', 'On');
 	</head>
 <body>
 
-<p>testing</p>
 
+
+<?php
+
+if(isset($_SESSION['User'])){
+	session_destroy();
+	die();
+}
+
+?>
 
 <div>
-	<form method="post" action="content1.php">
+	<form method='post' action='content1.php'>
 		<fieldset>
 			<legend>Login</legend>
-			<p>Username: <input type="text" name="username"/></p>
+			<p>Username: <input type='text' name='username'/></p>
 		</fieldset>
-		<p><input type="submit" value="Login"/></p>
+		<p><input type='submit' value='Login'/></p>
 	</form>
 </div>
+
 
 </body>
 </html>

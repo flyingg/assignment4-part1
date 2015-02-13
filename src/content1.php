@@ -18,11 +18,10 @@ ini_set('display_erros', 1);
 
 
 $username = $_POST['username'];
-$returnLoginURL;
+
 
 
 if(!isset($_SESSION['User']) && $username == null){
-	echo "<br>testing in first block";
 //	$_SESSION = array();
 //	$filePath = explode('/', $_SERVER['PHP_SELF'], -1);
 //	$filePath = implode('/', $filePath);
@@ -31,6 +30,7 @@ if(!isset($_SESSION['User']) && $username == null){
 	header("Location: http://web.engr.oregonstate.edu/~galeg/CS290/W5/login.php", true);
 	session_destroy();
 	die();
+	echo "<br>A username must be entered. Click <a href='login.php'>here</a> to return to the login screen";
 }
 
 
@@ -45,9 +45,8 @@ if(session_start() == PHP_SESSION_ACTIVE){
 	}
 
 	$_SESSION['visits']++;
-	echo "yo dog, $_SESSION[username], you have been to this site like $_SESSION[visits] times boi!! \n";
+	echo "<br>Hello, $_SESSION[username], you have visited this page $_SESSION[visits] times before!! Click <a href='login.php'>here</a> to logout.\n";
+	echo "<br>I have another page that would be worth your time - Click <a href='content2.php'>here</a> to go there.\n";
 }
-
-echo "testing";
 
 ?>
