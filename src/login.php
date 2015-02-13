@@ -1,9 +1,8 @@
 <?php
+session_start();
 error_reporting(E_ALL);
 ini_set('display_erros', 'On');
-if(isset($_GET['logout'])){
-	session_start();
-	session_destroy();}
+
 ?>
 
 <!DOCTYPE html>

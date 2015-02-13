@@ -1,6 +1,8 @@
 <?php
+session_start();
 error_reporting(E_ALL);
 ini_set('display_erros', 1);
+
 ?>
 
 <!DOCTYPE html>
@@ -14,19 +16,20 @@ ini_set('display_erros', 1);
 
 <?php
 
+
 $username = $_POST['username'];
 $returnLoginURL;
 
-session_start();
+
 if(!isset($_SESSION['User']) && $username == null){
-	echo "testing in first block";
-	$_SESSION = array();
+	echo "<br>testing in first block";
+//	$_SESSION = array();
+//	$filePath = explode('/', $_SERVER['PHP_SELF'], -1);
+//	$filePath = implode('/', $filePath);
+//	$redirect = "http://" . $_SERVER['HTTP_HOST'] . $filePath;
+//	$returnLoginURL = $redirect . "/login.php";
+	header("Location: http://web.engr.oregonstate.edu/~galeg/CS290/W5/login.php", true);
 	session_destroy();
-	$filePath = explode('/', $_SERVER['PHP_SELF'], -1);
-	$filePath = implode('/', $filePath);
-	$redirect = "http://" . $_SERVER['HTTP_HOST'] . $filePath;
-	$returnLoginURL = $redirect . "/login.php";
-	header("Location: {$redirect}/login.php", true);
 	die();
 }
 
