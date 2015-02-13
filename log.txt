@@ -1,4 +1,44 @@
 Start: 19:00:00 
+End: Fri, 13 Feb 2015 00:40:33 -0800 
+Tasks: Finally all working - jeezzz not looking to do the MySQL. Just need to finish log.
+
+Start: 19:00:00 
+End: Thu, 12 Feb 2015 22:35:51 -0800 
+Tasks: Still having problems :/
+
+Start: 19:00:00 
+End: Thu, 12 Feb 2015 21:21:28 -0800 
+Tasks: Talked with a tutor to get more help. almost done. mostly working. just need to add mroe content to content2.php
+
+Start: 19:00:00 
+End: Wed, 11 Feb 2015 00:27:20 -0800 
+Tasks: Did not get login/content files done - too tired
+
+Start: 19:00:00 
+End: Wed, 11 Feb 2015 00:04:46 -0800 
+Tasks: The previous commit with changes to three msg was wrong. There were three files being being workrkrked on
+
+Start: 19:00:00 
+End: Wed, 11 Feb 2015 00:03:26 -0800 
+Tasks: Finished loopback.php - moving on to login.php
+
+Start: 19:00:00 
+End: Tue, 10 Feb 2015 22:26:20 -0800 
+Tasks: Finished loopback.php - moving on to login.php
+
+Start: 19:00:00 
+End: Tue, 10 Feb 2015 21:51:26 -0800 
+Tasks: Almost done with loopback.ph
+
+Start: 19:00:00 
+End: Tue, 10 Feb 2015 20:24:31 -0800 
+Tasks: additional modification to log.txt file
+
+Start: 
+19:00:00 End: Tue, 10 Feb 2015 20:21:08 -0800 
+Tasks: modified log.txt file
+
+Start: 19:00:00 
 End: Tue, 10 Feb 2015 20:17:04 -0800 
 Tasks: Get the other php files ready for completion. Goal is to finish tonight to start with part 2.
 
