@@ -24,6 +24,21 @@ if(isset($_SESSION['User'])){
 
 ?>
 
+
+<?php 
+
+session_start();
+
+$_SESSION['youwerehere'] = "yes";
+
+
+
+
+?>
+
+
+
+
 <div>
 	<form method='post' action='content1.php'>
 		<fieldset>
